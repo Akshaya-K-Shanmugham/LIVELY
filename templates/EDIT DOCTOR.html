@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'ADMINindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="updatedoctor#counts">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>FIRST NAME </th>
+      <td>&nbsp;<input type="text" name="textfield1"  value="{{val[2]}}" /></td>
+    </tr>
+    <tr>
+      <th>LAST NAME </th>
+      <td>&nbsp;<input type="text" name="textfield2"  value="{{val[3]}}" /></td>
+    </tr>
+    <tr>
+      <th>AGE</th>
+      <td>    <input type="text" name="textfield3"  value="{{val[4]}}"/>  </td>&nbsp;
+    </tr>
+    <tr>
+      <th>GENDER</th>
+      <td>
+        <label>
+          <input name="radiobutton" type="radio" value="MALE"  {% if val[5]=='MALE' %} checked {% endif %}  />
+        </label>
+        MALE
+
+          <label>
+            <input name="radiobutton" type="radio" value="FEMALE" {% if val[5]=='FEMALE' %} checked {% endif %} />
+          </label>
+        FEMALE
+                 <label>
+            <input name="radiobutton" type="radio" value="OTHERS"  {% if val[5]=='OTHERS' %} checked {% endif %}/>
+          </label>
+        OTHERS
+                <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <th>SPECIALIZATION</th>
+      <td><input type="text" name="textfield4"  value="{{val[6]}}" /></td>
+    </tr>
+    <tr>
+      <th>PLACE</th>
+      <td>&nbsp;<input type="text" name="textfield5"   value="{{val[9]}}"/></td>
+    </tr>
+    <tr>
+      <th height="30">POST</th>
+      <td><label>
+        <input type="text" name="textfield6"   value="{{val[10]}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>PIN</th>
+      <td><input type="text" name="textfield7"  value="{{val[11]}}"/></td>
+    </tr>
+    <tr>
+      <th>E MAIL </th>
+      <td><input type="text" name="textfield8" value="{{val[8]}}"  /></td>
+    </tr>
+    <tr>
+      <th>PHONE</th>
+      <td><input type="text" name="textfield9"  value="{{val[7]}}" /></td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="center"><label>
+        <input type="submit" name="Submit" value="update" class="btn btn-dark"/>
+      </label></td>
+    </tr>
+  </table>
+
+</form>
+</body>
+{% endblock %}

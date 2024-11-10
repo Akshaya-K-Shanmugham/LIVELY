@@ -1,0 +1,88 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'ADMINindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="adddoctor#counts">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>FIRST NAME </th>
+      <td>&nbsp;<input type="text" name="textfield1" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th>LAST NAME </th>
+      <td>&nbsp;<input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th>AGE</th>
+      <td>    <input type="text" name="textfield3" required />  </td>&nbsp;
+    </tr>
+    <tr>
+      <th>GENDER</th>
+      <td>
+        <label>
+          <input name="radiobutton" type="radio" value="MALE" />
+        </label>
+        MALE
+
+          <label>
+            <input name="radiobutton" type="radio" value="FEMALE" />
+          </label>
+        FEMALE
+                 <label>
+            <input name="radiobutton" type="radio" value="OTHERS" />
+          </label>
+        OTHERS
+                <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <th>SPECIALIZATION</th>
+      <td><input type="text" name="textfield4" required /></td>
+    </tr>
+    <tr>
+      <th>PLACE</th>
+      <td>&nbsp;<input type="text" name="textfield5" pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th height="30">POST</th>
+      <td><label>
+        <input type="text" name="textfield6" pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>PIN</th>
+      <td><input type="text" name="textfield7" required /></td>
+    </tr>
+    <tr>
+      <th>E MAIL </th>
+      <td><input type="text" name="textfield8" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+    </tr>
+    <tr>
+      <th>PHONE</th>
+      <td><input type="text" name="textfield9" required pattern="[6789][0-9]{9}" /></td>
+    </tr>
+    <tr>
+      <th>USERNAME</th>
+      <td><input type="text" name="textfield10" required /></td>
+    </tr>
+    <tr>
+      <th>PASSWORD</th>
+      <td><label>
+        <input type="password" name="textfield11"/>
+
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><label>
+        <input type="submit" name="Submit" value="add" class="btn btn-dark"/>
+      </label></td>
+    </tr>
+  </table>
+
+</form>
+</body>
+{% endblock %}
